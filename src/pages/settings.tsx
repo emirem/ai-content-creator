@@ -1,17 +1,15 @@
 import Head from "next/head";
 import type { Session } from "next-auth";
 import { getServerSession } from "next-auth/next";
-import { type ChangeEvent, type FormEvent, useState } from "react";
 import type { GetServerSidePropsContext, NextPage } from "next";
+import { type ChangeEvent, type FormEvent, useState } from "react";
 
 import { Navbar } from "~/components/Navbar";
-import { authOptions } from "~/pages/api/auth/[...nextauth]";
-import type { ChatCompletionRequestMessage } from "openai";
 import { Spinner } from "~/components/icons";
-import { env } from "~/env.mjs";
-import { SupabaseClient } from "@supabase/supabase-js";
-import type { ModelContext } from "./api/updateAiContext";
 import { getModelContext } from "~/util/modelContext";
+import type { ModelContext } from "./api/updateAiContext";
+import type { ChatCompletionRequestMessage } from "openai";
+import { authOptions } from "~/pages/api/auth/[...nextauth]";
 
 const Settings: NextPage<{
   user: Session["user"];

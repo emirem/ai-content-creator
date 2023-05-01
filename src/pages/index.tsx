@@ -3,8 +3,6 @@ import { type NextPage } from "next";
 import { useSession } from "next-auth/react";
 import { Navbar } from "~/components/Navbar";
 
-export const CHECK_PROMPT_STATE_INTERVAL = 150000; // 150s
-
 const Home: NextPage = () => {
   const { data: session, status } = useSession();
 
