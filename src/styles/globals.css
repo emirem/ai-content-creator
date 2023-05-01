@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.paper-bg {
+  background: radial-gradient(ellipse at center,hsl(16.62deg 52.63% 37.14% / 52%) 0,#f5a954 100%);
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #15162c;
+  border-radius: 3px;
+}
+
+/* Handle */
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #3c3f78;
+  border-radius: 3px;
+}
+
+/* Handle on hover */
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
